@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+    db_mongo:
+        image: mongo:3.0.15-wheezy
+        restart: always
+        ports:
+            - 27017:27017
+        volumes:
+            - ${LEFT_DOCKER_PATH}/mongodb:/data/db

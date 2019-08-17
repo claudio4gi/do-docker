@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+    db_mysql:
+        image: mysql:5.7
+        restart: always
+        ports:
+            - 3306:3306
+        volumes:
+            - ${LEFT_DOCKER_PATH}/mysql:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: "test"
+            MYSQL_USER: "admin"
+            MYSQL_PASSWORD: "admin"
+            MYSQL_ROOT_PASSWORD: "admin"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
