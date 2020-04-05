@@ -1,2 +1,2 @@
-# learn-docker
-Repo to study Docker
+# Project
+> Repository to Docker study
