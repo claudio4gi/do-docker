@@ -1,8 +1,7 @@
-version: '2'
+version: "3"
 
 services:
-
-    db_postgres:
+    postgres:
         image: postgres:10.1
         restart: always
         ports:

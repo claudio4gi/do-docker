@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  mockws:
+    image: iundarigun/mock-ws
+    ports:
+      - 1899:1899
+    volumes:
+      - ${LEFT_DOCKER_PATH}/mockws:/home/config
