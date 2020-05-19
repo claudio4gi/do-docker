@@ -6,9 +6,11 @@ services:
         restart: always
         ports:
             - 5432:5432
+        environment:
+            PGDATA: "/var/lib/postgresql/data/pgdata"
+            POSTGRES_DB: "personal"
+            POSTGRES_USER: "admin"
+            POSTGRES_PASSWORD: "admin"
         volumes:
             - ${LEFT_DOCKER_PATH}/postgresql:/var/lib/postgresql
-        environment:
-            POSTGRES_USER: "root"
-            POSTGRES_PASSWORD: "admin"
-            POSTGRES_DB: "root"
+            - ${LEFT_DOCKER_PATH}/postgresql/data:/var/lib/postgresql/data
