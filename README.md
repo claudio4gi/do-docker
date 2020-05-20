@@ -1,2 +1,1 @@
-# Project
-> Repository to Docker study
+> Docker study repository
