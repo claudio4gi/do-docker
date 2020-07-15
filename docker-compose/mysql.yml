@@ -1,16 +1,14 @@
 version: "3"
 
 services:
-    mysql:
+    db:
         image: mysql:latest
+        command: --default-authentication-plugin=mysql_native_password
         restart: always
         ports:
             - 3306:3306
         volumes:
             - ${LEFT_DOCKER_PATH}/mysql:/var/lib/mysql
         environment:
-            MYSQL_DATABASE: "test"
-            MYSQL_USER: "admin"
-            MYSQL_PASSWORD: "admin"
+            MYSQL_DATABASE: "default"
             MYSQL_ROOT_PASSWORD: "admin"
-            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
