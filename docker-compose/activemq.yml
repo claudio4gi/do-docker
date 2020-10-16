@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  activemq:
+    hostname: activemq_local
+    container_name: activemq
+    image: rmohr/activemq
+    restart: always
+    ports:
+      - 61616:61616
+      - 8161:8161
+    volumes:
+      - ${LEFT_DOCKER_PATH}/activemq/conf:/mnt/conf
+      - ${LEFT_DOCKER_PATH}/activemq/data:/mnt/data

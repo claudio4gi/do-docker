@@ -2,6 +2,8 @@ version: "3"
 
 services:
   mockws:
+    hostname: mockws_local
+    container_name: mockws
     image: iundarigun/mock-ws
     ports:
       - 1899:1899

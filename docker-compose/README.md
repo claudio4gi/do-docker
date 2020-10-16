@@ -1,13 +1,13 @@
-# COMMAND
+# Commands
 
-Environment
----
-```
-$ export LEFT_DOCKER_PATH="/path/..."
+## Environment
+
+```shell
+export LEFT_DOCKER_PATH="/path/..."
 ```
 
-Start
----
-```
-$ docker-compose -f <YML file> up -d
+## Perform
+
+```shell
+docker-compose -p <project> -f <yml file> up -d
 ```

@@ -2,6 +2,8 @@ version: '3'
 
 services:
   jaeger:
+    hostname: jaeger_local
+    container_name: jaeger
     image: jaegertracing/all-in-one:latest
     ports:
       - 5775:5775/udp

@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  activemq_artemis:
+    hostname: activemq_artemis_local
+    container_name: activemq_artemis
+    image: vromero/activemq-artemis
+    restart: always
+    ports:
+      - 61616:61616
+      - 8161:8161
+    environment:
+      ARTEMIS_USERNAME: "admin"
+      ARTEMIS_PASSWORD: "admin"

@@ -2,6 +2,8 @@ version: "3"
 
 services:
   grafana:
+    hostname: grafana_local
+    container_name: grafana
     image: grafana/grafana:6.2.1
     ports:
       - 3000:3000
@@ -13,6 +15,8 @@ services:
       GF_SECURITY_ADMIN_PASSWORD: admin
 
   influxdb:
+    hostname: influxdb_local
+    container_name: influxdb
     image: influxdb:1.7.6-alpine
     ports:
       - 8086:8086
