@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  scylla-manager:
+    image: scylladb/scylla-manager
+    ports:
+      - 5080:5080
+      - 5090:5090
+      - 5112:5112
+      - 5443:5443
+    container_name: scylla-manager
+    depends_on:
+      - scylla-manager-db
+
+  scylla-manager-db:
+    image: scylladb/scylla
+    command:
+      - "--smp"
+      - "2"
+    ports:
+      - 9042:9042
+      - 9160:9160
+      - 9180:9180
+      - 10000:10000
+    container_name: scylla-manager-db
