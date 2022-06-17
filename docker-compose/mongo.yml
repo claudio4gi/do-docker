@@ -4,9 +4,9 @@ services:
   mongo:
     hostname: mongo_local
     container_name: mongo
-    image: mongo:3.0.15-wheezy
+    image: mongo:4.2
     restart: always
     ports:
       - 27017:27017
     volumes:
-      - ${LEFT_DOCKER_PATH}/mongodb:/data/db
+      - ${SO_DOCKER_PATH}/mongodb:/data/db
