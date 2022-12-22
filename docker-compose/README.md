@@ -3,11 +3,11 @@
 ## Environment
 
 ```shell
-export LEFT_DOCKER_PATH="/path/..."
+export DOCKER_ENV_PATH=<your path>
 ```
 
 ## Perform
 
 ```shell
-docker-compose -p <project> -f <yml file> up -d
+docker compose -p <project> -f <yml file> up -d
 ```
