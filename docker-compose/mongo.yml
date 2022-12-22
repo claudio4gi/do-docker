@@ -9,4 +9,5 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ${SO_DOCKER_PATH}/mongodb:/data/db
+      - ${DOCKER_ENV_PATH}/mongodb/db:/data/db
+      - ${DOCKER_ENV_PATH}/mongodb/dump:/dump
